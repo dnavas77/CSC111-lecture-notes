@@ -1,0 +1,162 @@
+Student: Danilo Navas
+
+Problem 1
+
+1.	Trace selection sort on the following array of letters (sort into alphabetical order):
+After each pass (outer loop iteration) of selection sort, show the contents of the array and
+the number of letter-to-letter comparisons performed on that pass (an exact number, not big-O).
+
+M U E J R Q X B
+												comparisons
+Is M less than U? yes, continue...					1
+Is M less than E? no, continue...					1
+Is E less than J? yes, continue...					1
+Is E less than R? yes, continue...					1
+is E less than Q? yes, continue...					1
+is E less than X? yes, continue...					1
+is E less than B? no, swap B to first position		1
+	B M U E J R Q X
+Is M less than U? yes, continue...					1
+Is M less than E? no, continue...					1
+Is E less than J? yes, continue...					1
+Is E less than R? yes, continue...					1
+Is E less than Q? yes, continue...					1
+Is E less than X? yes, swap E to second position	1
+	B E M U J R Q X
+Is M less than U? yes, continue...					1
+Is M less than J? no, continue...					1
+Is J less than R? yes, continue...					1
+Is J less than Q? yes, continue...					1
+Is J less than X? yes, swap J to third position		1
+	B E J M U R Q X
+Is M less than U? yes, continue...					1
+Is M less than R? yes, continue...					1
+Is M less than Q? yes, continue...					1
+Is M less than X? yes, leave M in fourth position	1
+Is U less than R? no, continue...					1
+Is R less than Q? no, continue...					1
+Is Q less than X? yes, swap Q to fifth position		1
+	B E J M Q U R X
+Is U less than R? no, continue...					1
+Is R less than X? yes, swap R to sixth position		1
+	B E J M Q R U X
+Is U less than X? yes, leave U in seventh position.	1
+Leave X in eight position.
+--------------------------------------------------------------------
+				30 comparisons to sort letters.
+
+
+2.	Trace insertion sort on the following array of letters (sort into alphabetical order):
+After each pass (outer loop iteration) of insertion sort, show the contents of the array and
+the number of letter-to-letter comparisons performed on that pass (an exact number, not big-O).
+
+M U E J R Q X B
+
+Is M less than U? yes, do not swap.
+Is E less than U? yes, continue...
+Is E less than M? yes, swap.				2 comparison to swap E
+	E M U J R Q X B
+Is J less than U? yes, continue...
+Is J less than M? yes, continue..
+Is J less than E? no, swap with previous	3 comparisons to swap J
+	E J M U R Q X B
+Is R less than U? yes, continue...
+Is R less than M? no, swap with previous	2 comparisons to swap R
+	E J M R U Q X B
+Is Q less than U? yes, continue...
+Is Q less than R? yes, continue...
+Is Q less than M? no, swap with previous	3 comparisons to swap Q
+	E J M Q R U X B
+Is X less than U? no, do not swap.			1 comparison, no swap X
+Is B less than X? yes, continue...
+Is B less than U? yes, continue...
+Is B less than R? yes, continue...
+Is B less than Q? yes, continue...
+Is B less than M? yes, continue...
+Is B less than J? yes, continue...
+Is B less than E? yes, swap.				6 comparisons to swap B
+	B E J M Q R U X
+------------------------------------------------------------------------
+					17 comparisons to sort letters.
+
+Problem 2:
+------------------------------------
+a. Determine if 2 arrays contain the same elements
+
+	1. Algorithm to solve problem:
+		If size of any of the arrays if bigger. Return false. Arrays don't have same elements.
+		Otherwise, create a for loop with counter starting at 0, and check if array1 index "i"
+		is equal to array2 index "i", the moment the comparison returns false, break out of the
+		loop and inform user that arrays don't have same elements.
+
+	2. Factors that influence the running time:
+		x = length of arrays.
+
+	3. Operations that must be counted:
+		Is array1 index 'i' equals to array2 index 'i'
+
+	4. Count of operations performed by algorithm.
+		As many as array size of as many as needed before comparison of 2 indexes returns false.
+
+	5. Best and worst case inputs:
+		Best: 2 arrays are different size, hence, no need to compare elements. Return false.
+		Worst: arrays are same size and last 2 elements are not same, hence, walking through all
+				indexes of each array before finding that the last 2 elements are different.
+
+	6. Big-O notation:
+		f(n) = n
+--------------------------------------
+
+b. Counting total number characters that have a duplicate within a string
+	(i.e. "gigi the gato" would result in 7 (g x 3 + i x 2 + t x 2)
+
+	1. Algorithm to solve problem:
+		Nested loops. first loop will select first character and second loop will check the
+		selected character against all the other characters. count will increase by 1 every time
+		the character in the inner loop is equal to the character in the outer loop.
+		After first character is checked against all the other characters in string, except where
+		index is same as selected character, add the value in count variable to totalDuplicate
+		variables. Continue loop checking second character in string against the entire string
+		except where index is same as selected character to compare.
+
+	2. Factors that influence the running time:
+		x = length of string.
+
+	3. Operations that must be counted:
+		Every time character in outer loop is compared against character in inner loop.
+
+	4. Count of operations performed by algorithm.
+		The amount of characters in string times the size of the string.
+
+	5. Best and worst case inputs:
+		Best: there's no repeated characters, hence, statements inside if condition are not executed.
+		Worst: all characters are the same, hence, statements inside if condition always execute.
+
+	6. Big-O notation:
+		f(n) = n^2
+-------------------------------------
+
+c. Finding an empty row in a 2-D array where empty is defined as an element with a 0 entry.
+
+	1. Algorithm to solve problem:
+		Nested loops. The loops outside will run through the rows, if statement will check if first
+		element in row is equal to '0', if no row at index 0 starts with '0', then return false.
+		Otherwise, when it finds row, loop inside if statement will check if all indexes in row
+		are '0', like  the first index, will return true if all are 0, false otherwise.
+		(i.e. there's no empty row).
+
+	2. Factors that influence the running time:
+		x = size of arrays.
+
+	3. Operations that must be counted:
+		Comparisons in first loop and comparisons in loop inside if statement.
+
+	4. Count of operations performed by algorithm.
+		Size of the array + length of row (where index 0 was empty)
+
+	5. Best and worst case inputs:
+		Best: first row in 2d array is empty.
+		Worst: last row in 2d array is empty or no row is empty.
+
+	6. Big-O notation:
+		f(n) = 2n

@@ -1,0 +1,103 @@
+/***
+ * Rutgers University - New Brunswick. Spring 2015.
+ *
+ * Assignment 2 for CSC-111
+ * Completed: March 7, 2015.
+ * Student: Danilo Navas
+ * Professor: Andrew Tjang
+-------------------------------------------
+
+Program name: Scores.java
+Description: ask user for numbers of judges. Then have user enter scores from 0 to 10 for each judge
+				 calculate average of all scores after dropping lowest and highest score.
+
+Input: Real numbers between 0 and 10.
+Output: positive real number.
+
+Possible errors:
+	Bad data:
+		(a) user enters letters or symbols.
+		(b) user enters a negative number for number of judges.
+		(c) user enters a number less than 0 or greater than 10 for the score.
+
+	Boundary conditions:
+		(a) user enters zero for number of judges.
+
+Test cases:
+	Case 1:
+		Number of judges: 0
+		Expected Output: "invalid entry, enter number of judges"
+		Output: "invalid entry, enter number of judges"
+	Case 2:
+		Number of judges: -1
+		Expected Output: "invalid entry, enter number of judges"
+		Output: "invalid entry, enter number of judges"
+	Case 3:
+		Number of judges: 1
+		Expected Output: "enter at least 3 judges"
+		Output: "enter at least 3 judges"
+
+-----------------------------------------
+
+Program name: TwoSmallest.java
+Description: ask user for terminating value (not included in calculations). let user enter as many values as they want,
+				 if they enter terminating value, find 2 smallest values and print them to screen. If same value enter twice
+				 two smallest values will be same.
+
+Input: Real numbers
+Output: Real numbers (1st smallest, and 2nd smallest).
+
+Possible errors:
+	Bad data:
+		(a) user enters letters or symbols.
+
+	Boundary conditions:
+		(a) user enters terminating value as first value.
+
+Test cases:
+	Case 1:
+		Terminating value: 0
+		Values: 0
+		Expected Output: "enter at least 3 values"
+		Output: "enter at least 3 values"
+	Case 2:
+		Terminating value: 0
+		Values: 1, 0
+		Expected Output: "enter at least 3 values"
+		Output: "enter at least 3 values"
+	Case 3:
+		Terminating value: 123
+		Values: 5, 10.6, 0, -8, 10, 3.
+		Expected Output: First smallest: -8, Second Smallest: 0
+		Output: First smallest: -8, Second Smallest: 0
+
+-----------------------------------------
+
+Program name: NthPrime.java
+Description: ask user for an integer value 'n', then calculate the 'nth' prime number.
+
+Input: positive integer numbers.
+Output: positive integer number.
+
+Possible errors:
+	Bad data:
+		(a) user enters letters or symbols.
+
+	Boundary conditions:
+		(a) user enters a negative number for 'n'
+
+Test cases:
+	Case 1:
+		Input 'n' value: 0
+		Expected Output: "User entered bad input. Enter n:"
+		Output: "User entered bad input. Enter n:"
+	Case 2:
+		Input 'n' value: -1
+		Expected Output: "User entered bad input. Enter n:"
+		Output: "User entered bad input. Enter n:"
+	Case 3:
+		Input 'n' value: 55
+		Expected Output: 257
+		Output: 257
+
+-----------------------------------------

@@ -1,0 +1,84 @@
+TEST CASES FOR PigLatin.java
+
+   Case 1:
+      Input: Mango
+      Expected Output: angoMay
+      Actual Output: angoMay
+
+   Case 2:
+      Input: apple
+      Expected Output: appleway
+      Actual Output: appleway
+
+   Case 3:
+      Input: University
+      Expected Output: Universityway
+      Actual Output: Universityway
+
+   Case 4:
+      Input: book
+      Expected Output: ookbay
+      Actual Output: ookbay
+
+-----------------------------------------
+TEST CASES FOR WorldCount.java
+
+   Case 1:
+      Input: today is a beautiful day
+      Minimun word length: 2
+      Expected Output: 4
+      Actual Output: 4
+
+   Case 2:
+      Input: "   I'm the son, I'm the heir"
+      Minimun word length: 3
+      Expected Output: 4
+      Actual Output: 4
+
+   Case 3:
+      Input: my  email address is: dan@dan.com
+      Minimun word length: 4
+      Expected Output: 3
+      Actual Output: 3
+
+   Case 4:
+      Input: 3m3 is a brand that manufactures tape at $12.00 per unit.
+      Minimun word length: 1
+      Expected Output: 10
+      Actual Output: 10
+
+   Case 5:
+      Input: SELECT * FROM "World" WHERE "Someone" LIKE '%You%' ... /> no results!
+      Minimun word length: 3
+      Expected Output: 8
+      Actual Output: 8
+
+-----------------------------------------
+TEST CASES FOR Compress.java
+
+   Case 1:
+      Input: @@@@@###$%^**KKKKKKDDDDRdadfmmMMAA
+      Expected Output: 5@3#$%^2*6K4DRdadf2m2M2A
+      Actual Output: 5@3#$%^2*6K4DRdadf2m2M2A
+
+   Case 2:
+      Input: 22
+      Expected Output: 22
+      Actual Output: 22
+
+   Case 3:
+      Input: 1@
+      Expected Output: 1@
+      Actual Output: 1@
+
+   Case 4:
+      Input: "   ...,,,;: a   AA i"
+      Expected Output: "3 3.3,;: a3 2A i"
+      Actual Output: "3 3.3,;: a3 2A i"
+
+   Case 5:
+      Input: 2
+      Expected Output: 2
+      Actual Output: 2
+
+-----------------------------------------
